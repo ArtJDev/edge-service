@@ -61,6 +61,18 @@ spring:
               factor: 2
               basedOnPreviousValue: false
 
+  security:
+    oauth2:
+      client:
+        registration:
+          keycloak:
+            client-id: edge-service
+            client-secret: itbooks-keycloak-secret
+            scope: openid
+        provider:
+          keycloak:
+            issuer-uri: http:/ /localhost:8080/realms/ITBooks
+
   data:
     redis:
       connect-timeout: 2s
